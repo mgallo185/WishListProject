@@ -70,13 +70,15 @@ class WishListAdapter (private val wishList: MutableList<WishList>): RecyclerVie
         holder.itemView.setOnLongClickListener{
             wishList.removeAt(position)
             notifyItemRemoved(position)
-            Toast.makeText(it.context, "Long Click ", Toast.LENGTH_LONG).show()
+            Toast.makeText(it.context, "Item Removed ", Toast.LENGTH_LONG).show()
             true
         }
 
 
 
     }
+
+
 
 
 }

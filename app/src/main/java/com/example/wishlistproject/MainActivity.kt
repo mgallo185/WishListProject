@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val button= findViewById<Button>(R.id.button)
 
         val wishlistRv = findViewById<RecyclerView>(R.id.wish_list)
-        wishlists= WishListFetcher.getWishLists()
+        wishlists= WishListFetcher.blankList()
         var adapter = WishListAdapter(wishlists as MutableList<WishList>)
         // Attach the adapter to the RecyclerView to populate items
         wishlistRv.adapter = adapter

@@ -4,14 +4,19 @@ class WishListFetcher {
 companion object{
 
 
-   var names =""
-    var prices = ""
-    var urls = ""
+   var names: String? = ""
+    var prices : String? = ""
+    var urls : String? = ""
     fun getWishLists(): MutableList<WishList> {
         var wishlists : MutableList<WishList> = ArrayList()
-            val wishlist = WishList(names, prices, urls)
+            val wishlist = WishList(names.toString(), prices.toString(), urls.toString())
             wishlists.add(wishlist)
 
+        return wishlists
+    }
+
+    fun blankList():MutableList<WishList>{
+        var wishlists : MutableList<WishList> = ArrayList()
         return wishlists
     }
 
